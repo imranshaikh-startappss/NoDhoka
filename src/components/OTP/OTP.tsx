@@ -9,7 +9,7 @@ import {
   } from 'react-native';
   import OTPInputView from '@twotalltotems/react-native-otp-input'
   import { useState,useEffect } from 'react';
-import colors from 'NoDhoka/src/Colors/Colors';
+import colors from "../../Colors/Colors"
 
 
 const OTP = () => {
