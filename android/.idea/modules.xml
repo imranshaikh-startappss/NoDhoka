@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/11321506/NoDhoka.react-native-mmkv.main.iml" filepath="$PROJECT_DIR$/.idea/modules/11321506/NoDhoka.react-native-mmkv.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1065491923/NoDhoka.react-native-reanimated.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-1065491923/NoDhoka.react-native-reanimated.main.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/NoDhoka.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/NoDhoka.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1766190410/NoDhoka.react-native-gesture-handler.main.iml" filepath="$PROJECT_DIR$/.idea/modules/1766190410/NoDhoka.react-native-gesture-handler.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1486379207/NoDhoka.react-native-mmkv.main.iml" filepath="$PROJECT_DIR$/.idea/modules/1486379207/NoDhoka.react-native-mmkv.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1801581934/NoDhoka.react-native-reanimated.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-1801581934/NoDhoka.react-native-reanimated.main.iml" />
+>>>>>>> 15e868ae02cf4443d45861af327a8db5da4b5061
     </modules>
   </component>
 </project>
