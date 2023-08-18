@@ -9,7 +9,7 @@ import {
   } from 'react-native';
   import OTPInputView from '@twotalltotems/react-native-otp-input'
   import { useState,useEffect } from 'react';
-
+import colors from 'NoDhoka/src/Colors/Colors';
 
 
 const OTP = () => {
@@ -65,22 +65,22 @@ const styles = StyleSheet.create({
       height: 45,
       borderWidth: 0,
       borderBottomWidth: 1,
-      color:"blcak"
+      color:colors.green
     },
   
     underlineStyleHighLighted: {
-      borderColor: "green",
+      borderColor:colors.green,
 
     },
     otpconatiner: {
-      backgroundColor:"white",
+      backgroundColor:colors.White,
       display:"flex",
       alignItems:"center",
       height:"100%",
       width:"100%",
     },
     otp: {
-      backgroundColor:"white",
+      backgroundColor:colors.White,
       display:"flex",
       height:"100%",
       width:"60%",
@@ -93,26 +93,26 @@ const styles = StyleSheet.create({
       lineHeight: 21,
       fontWeight: 'bold',
       letterSpacing: 0.25,
-      color: 'green',
+      color:colors.green,
     },
     textdisabletitle: {
       fontSize: 16,
       lineHeight: 21,
       fontWeight: 'bold',
       letterSpacing: 0.25,
-      color: 'grey',
+      color:colors.grey,
     },
     text: {
-      color: 'black',
+      color:colors.balck,
     },
     textdisable: {
-      color: 'grey',
+      color:colors.grey,
     },
     second: {
-      color: 'green',
+      color:colors.green,
     },
     seconddisable: {
-      color: 'grey',
+      color:colors.grey,
     },
 
 })
