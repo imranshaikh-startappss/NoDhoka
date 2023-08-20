@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/NoDhoka.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/NoDhoka.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1874138553/NoDhoka.react-native-gesture-handler.main.iml" filepath="$PROJECT_DIR$/.idea/modules/1874138553/NoDhoka.react-native-gesture-handler.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1999511480/NoDhoka.react-native-mmkv.main.iml" filepath="$PROJECT_DIR$/.idea/modules/1999511480/NoDhoka.react-native-mmkv.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1912268605/NoDhoka.react-native-reanimated.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-1912268605/NoDhoka.react-native-reanimated.main.iml" />
+    </modules>
+  </component>
+</project>
