@@ -53,6 +53,7 @@ const Example = () => {
         Layout.fill,
         Layout.colCenter,
         Layout.scrollSpaceBetween,
+        // { backgroundColor: isDark ? '#111' : '#FFF' }
       ]}
     >
       <View
@@ -62,6 +63,7 @@ const Example = () => {
           Layout.fullWidth,
           Layout.justifyContentCenter,
           Layout.alignItemsCenter,
+        
         ]}
       >
         <View
@@ -72,6 +74,7 @@ const Example = () => {
               width: 250,
               backgroundColor: isDark ? '#000000' : '#DFDFDF',
               borderRadius: 140,
+              
             },
           ]}
         />
@@ -90,6 +93,7 @@ const Example = () => {
           style={[
             Layout.absolute,
             {
+              
               height: 300,
               width: 300,
               transform: [{ translateY: 40 }],
@@ -148,7 +152,7 @@ const Example = () => {
           style={[
             Layout.absolute,
             {
-              top: '75%',
+              top: '75%', 
               right: 0,
             },
           ]}
@@ -174,6 +178,7 @@ const Example = () => {
           Layout.alignItemsStart,
           Layout.fullWidth,
           Gutters.regularHPadding,
+          
         ]}
       >
         <View>
@@ -194,6 +199,7 @@ const Example = () => {
             Layout.justifyContentBetween,
             Layout.fullWidth,
             Gutters.smallTMargin,
+            
           ]}
         >
           <TouchableOpacity
