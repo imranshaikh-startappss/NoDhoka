@@ -10,8 +10,8 @@ import { useTheme } from '../hooks';
 import MainNavigator from './Main';
 import { useFlipper } from '@react-navigation/devtools';
 import { ApplicationStackParamList } from '../../@types/navigation';
-import Login from '../components/Login/Login';
-import OTP from '../components/OTP/OTP';
+import Login from '../screens/Login/Login';
+import OTP from '../screens/OTP/OTP';
 
 const Stack = createStackNavigator<ApplicationStackParamList>();
 
