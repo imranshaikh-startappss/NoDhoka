@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,useState} from 'react';
 import {
   View,
   ActivityIndicator,
@@ -15,6 +15,9 @@ import { useTheme } from '../../hooks';
 import { useLazyFetchOneQuery } from '../../services/modules/users';
 import { changeTheme, ThemeState } from '../../store/theme';
 import i18next from 'i18next';
+import AsyncStorage from '@react-native-async-storage/async-storage'; // Import AsyncStorage
+import { useNavigation } from '@react-navigation/native';
+import { log } from 'console';
 
 const Example = () => {
   const { t } = useTranslation(['example', 'welcome']);
@@ -27,6 +30,16 @@ const Example = () => {
     darkMode: isDark,
   } = useTheme();
   const dispatch = useDispatch();
+ const navigation = useNavigation();
+const handleLogout = async ()=>{
+  try{
+    await AsyncStorage.removeItem('userToken');
+    navigation.navigate('Login' as never);
+  }catch(error){
+    console.log('Error logging out:',error);
+    
+  }
+}
 
   const [fetchOne, { data, isSuccess, isLoading, isFetching }] =
     useLazyFetchOneQuery();
@@ -238,6 +251,29 @@ const Example = () => {
             />
           </TouchableOpacity>
         </View>
+      </View>
+      <View
+        style={[
+          Layout.row,
+          Layout.justifyContentBetween,
+          Layout.fullWidth,
+          Gutters.smallTMargin,
+        ]}
+      >
+        {/* Logout button */}
+        <TouchableOpacity
+          style={[Common.button.circle, Gutters.regularBMargin]}
+          onPress={handleLogout}
+        >
+          <Image
+            source={Images.icons.send} // Replace with your vector icon
+            style={{ tintColor: isDark ? '#A6A4F0' : '#44427D' }}
+          />
+          <Text>Logout</Text>
+        </TouchableOpacity>
+
+        {/* Theme and language change buttons */}
+        {/* ... (rest of the code) */}
       </View>
     </ScrollView>
   );
