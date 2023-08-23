@@ -22,14 +22,14 @@
       <option name="url" value="https://www.jitpack.io" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="maven2" />
+      <option name="name" value="maven2" />
+      <option name="url" value="file:/$PROJECT_DIR$/../../../../msi%20laptop/Desktop/NoDhoka/node_modules/jsc-android/dist/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="maven" />
       <option name="name" value="maven" />
       <option name="url" value="https://oss.sonatype.org/content/repositories/snapshots/" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="maven2" />
-      <option name="name" value="maven2" />
-      <option name="url" value="file:/$PROJECT_DIR$/../node_modules/jsc-android/dist/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="Google" />
@@ -37,19 +37,24 @@
       <option name="url" value="https://dl.google.com/dl/android/maven2/" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="BintrayJCenter" />
+      <option name="name" value="BintrayJCenter" />
+      <option name="url" value="https://jcenter.bintray.com/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="maven4" />
       <option name="name" value="maven4" />
-      <option name="url" value="file:/$PROJECT_DIR$/../node_modules/react-native/android/" />
+      <option name="url" value="file:/$PROJECT_DIR$/../../../../msi%20laptop/Desktop/NoDhoka/node_modules/react-native/android/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="MavenLocal" />
       <option name="name" value="MavenLocal" />
-      <option name="url" value="file:/$USER_HOME$/.m2/repository/" />
+      <option name="url" value="file:/$PROJECT_DIR$/../../../../msi%20laptop/.m2/repository/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="maven4" />
       <option name="name" value="maven4" />
-      <option name="url" value="file:/$PROJECT_DIR$/../node_modules/react-native-screens/node_modules/react-native/android" />
+      <option name="url" value="file:/$PROJECT_DIR$/../../../../msi%20laptop/Desktop/NoDhoka/node_modules/react-native-screens/node_modules/react-native/android" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="maven4" />

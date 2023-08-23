@@ -1,6 +1,5 @@
 
 import React, { useState, useRef } from 'react';
-
 import {
   SafeAreaView,
   StyleSheet,
@@ -8,21 +7,27 @@ import {
   TouchableOpacity,
   Text,
   Alert,
+  ImageBackground
 } from 'react-native';
 import PhoneInput from 'react-native-phone-number-input';
-import { useNavigation } from '@react-navigation/native';
 import { ApplicationScreenProps } from '../../../@types/navigation';
-
-
+import { useTheme } from '../../hooks';
 
 const Login = ( { navigation }: ApplicationScreenProps) => {
+  const {
+    Common,
+    Fonts,
+    Gutters,
+    Layout,
+    Images,
+    darkMode: isDark,
+  } = useTheme();
 
   const [value, setValue] = useState('');
   const [valid, setValid] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
 
   const phoneInput = useRef<PhoneInput | null>(null);
-  // const navigation = useNavigation();
 
   const handleValidation = () => {
     const checkValid = phoneInput.current?.isValidNumber(value);
@@ -40,22 +45,26 @@ const Login = ( { navigation }: ApplicationScreenProps) => {
       ]);
     }
   };
-  
+
 
   return (
     <View style={styles.MainContainer}>
+      <ImageBackground source={Images.sparkles.bglg} style={styles.imageBackground}>
       <SafeAreaView>
         <PhoneInput 
-        
           ref={phoneInput}
+          // containerStyle={{ backgroundColor: 'none'}}
           defaultValue={value}
           defaultCode="IN"
           layout="first"
+          // textContainerStyle={{backgroundColor: 'transparent'}}
+          // textInputStyle={}
           onChangeText={(text) => {
             setValue(text);
             setValid(false);
             setShowMessage(false); 
           }}
+      
           withDarkTheme
           withShadow
           autoFocus
@@ -67,6 +76,8 @@ const Login = ( { navigation }: ApplicationScreenProps) => {
           <Text style={styles.text} >Submit</Text>
         </TouchableOpacity>
       </SafeAreaView>
+      </ImageBackground>
+
     </View>
   );
 };
@@ -74,8 +85,6 @@ const Login = ( { navigation }: ApplicationScreenProps) => {
 const styles = StyleSheet.create({
   MainContainer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: 'white',
   },
   errormessage: {
@@ -89,7 +98,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     borderRadius: 4,
     elevation: 3,
-    backgroundColor: 'green',
+    backgroundColor: 'rgb(0,191,99)',
     marginTop:20
   },
   text: {
@@ -98,6 +107,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     letterSpacing: 0.25,
     color: 'white',
+  },
+  imageBackground: {
+    flex: 1,
+    resizeMode: 'cover', 
+    justifyContent: 'center', 
+    alignItems: 'center', 
   },
 });
 
