@@ -27,7 +27,7 @@ const ApplicationNavigator = () => {
   return (
     <SafeAreaView style={[Layout.fill, { backgroundColor: colors.card }]}>
       <NavigationContainer theme={NavigationTheme} ref={navigationRef}>
-        <StatusBar barStyle={darkMode ? 'light-content' : 'dark-content'} />
+        <StatusBar barStyle={darkMode ? 'light-content' : 'dark-content'} backgroundColor={darkMode ?"rgb(0,191,99)":"rgb(0,191,99)"} />
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name="Startup" component={Login} />
           <Stack.Screen name="Main" component={OTP} />

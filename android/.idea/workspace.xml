@@ -5,19 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3f7e7a7-2f28-45ef-93cf-043b38f3db07" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Colors/Colors.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/navigators/Application.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/navigators/Application.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/screens/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/screens/Login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/screens/OTP/OTP.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/screens/OTP/OTP.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/theme/Images.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/theme/Images.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/theme/Variables.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/theme/Variables.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\msi laptop\.android\avd\Pixel_3a_API_34_extension_level_7_x86_64.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\msi laptop\.android\avd\Pixel_7_Pro_API_30.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />

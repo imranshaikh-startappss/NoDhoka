@@ -6,10 +6,13 @@ import {
     TouchableOpacity,
     Text,
     Alert,
+    ImageBackground
   } from 'react-native';
   import OTPInputView from '@twotalltotems/react-native-otp-input'
   import { useState,useEffect } from 'react';
-import colors from "../../Colors/Colors"
+import { useTheme } from '../../hooks';
+import { Colors } from 'NoDhoka/src/theme/Variables';
+
 
 
 const OTP = () => {
@@ -28,12 +31,20 @@ const OTP = () => {
 }, [seconds]);
 
   const ResendOTP =()=>{
-    console.log("hello")
+    // console.log("hello")
     setSeconds(30)
   }
+  const {
+    Common,
+    Fonts,
+    Gutters,
+    Layout,
+    Images,
+  } = useTheme();
   return (
     <>
     <View style={styles.otpconatiner}>
+      <ImageBackground source={Images.sparkles.otplg} style={styles.imageBackground}>
     <TouchableOpacity onPress={ResendOTP} style={styles.button} disabled = { (seconds == 0) ? false : true }>
      <Text style={(seconds == 0) ? styles.texttitlte : styles.textdisabletitle} >Resend OTP</Text>
    </TouchableOpacity>
@@ -48,6 +59,7 @@ const OTP = () => {
      console.log(`Code is ${code}, you are goo`)
     })}
     />
+    </ImageBackground>
     </View>
    </>
   )
@@ -65,22 +77,22 @@ const styles = StyleSheet.create({
       height: 45,
       borderWidth: 0,
       borderBottomWidth: 1,
-      color:colors.green
+      color:Colors.success
     },
   
     underlineStyleHighLighted: {
-      borderColor:colors.green,
+      borderColor:Colors.success,
 
     },
     otpconatiner: {
-      backgroundColor:colors.White,
+      backgroundColor:Colors.White,
       display:"flex",
       alignItems:"center",
       height:"100%",
       width:"100%",
     },
     otp: {
-      backgroundColor:colors.White,
+      backgroundColor:Colors.White,
       display:"flex",
       height:"100%",
       width:"60%",
@@ -93,26 +105,33 @@ const styles = StyleSheet.create({
       lineHeight: 21,
       fontWeight: 'bold',
       letterSpacing: 0.25,
-      color:colors.green,
+      color:Colors.success,
     },
     textdisabletitle: {
       fontSize: 16,
       lineHeight: 21,
       fontWeight: 'bold',
       letterSpacing: 0.25,
-      color:colors.grey,
+      color:Colors.grey,
     },
     text: {
-      color:colors.balck,
+      color:Colors.textGray800,
     },
     textdisable: {
-      color:colors.grey,
+      color:Colors.grey,
     },
     second: {
-      color:colors.green,
+      color:Colors.success,
     },
     seconddisable: {
-      color:colors.grey,
+      color:Colors.grey,
+    },
+    imageBackground: {
+      flex: 1,
+      resizeMode: 'cover',
+      alignItems: 'center',  
+       width: '100%',
+       height: '100%',
     },
 
 })

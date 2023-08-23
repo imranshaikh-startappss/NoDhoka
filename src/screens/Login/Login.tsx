@@ -49,15 +49,16 @@ const Login = ( { navigation }: ApplicationScreenProps) => {
 
   return (
     <View style={styles.MainContainer}>
-            <ImageBackground source={Images.sparkles.loginsc} style={styles.imageBackground}>
+      <ImageBackground source={Images.sparkles.bglg} style={styles.imageBackground}>
       <SafeAreaView>
         <PhoneInput 
           ref={phoneInput}
-          containerStyle={{ backgroundColor: 'none'}}
+          // containerStyle={{ backgroundColor: 'none'}}
           defaultValue={value}
           defaultCode="IN"
           layout="first"
-          textContainerStyle={{ backgroundColor: 'transparent'}}
+          // textContainerStyle={{backgroundColor: 'transparent'}}
+          // textInputStyle={}
           onChangeText={(text) => {
             setValue(text);
             setValid(false);
@@ -97,7 +98,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     borderRadius: 4,
     elevation: 3,
-    backgroundColor: 'green',
+    backgroundColor: 'rgb(0,191,99)',
     marginTop:20
   },
   text: {

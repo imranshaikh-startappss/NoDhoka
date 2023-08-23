@@ -19,11 +19,13 @@ export const Colors = {
   textGray400: '#4D4D4D',
   textGray200: '#A1A1A1',
   primary: '#E14032',
-  success: '#28a745',
+  success: 'rgb(0,191,99)',
   error: '#dc3545',
   //ComponentColors
   circleButtonBackground: '#E1E1EF',
   circleButtonColor: '#44427D',
+  grey:'#808080',
+  White:'#FFFFFF',
 };
 
 export const NavigationColors: Partial<ThemeNavigationColors> = {
