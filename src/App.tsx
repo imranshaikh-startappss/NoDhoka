@@ -6,6 +6,7 @@ import { store, persistor } from './store';
 import ApplicationNavigator from './navigators/Application';
 import './translations';
 
+
 const App = () => (
   <Provider store={store}>
     {/**

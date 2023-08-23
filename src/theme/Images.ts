@@ -11,6 +11,8 @@ export default function ({}: ThemeVariables) {
       bottomRight: require('./assets/images/sparkles-bottom-right.png'),
       bottom: require('./assets/images/sparkles-bottom.png'),
       bottomLeft: require('./assets/images/sparkles-bottom-left.png'),
+      menu:require('./assets/images/menu.png'),
+      Set:require('./assets/images/Set.png')
     },
     icons: {
       colors: require('./assets/images/colorswatch.png'),

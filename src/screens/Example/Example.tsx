@@ -44,6 +44,7 @@ const Example = () => {
   const onChangeLanguage = (lang: 'fr' | 'en') => {
     i18next.changeLanguage(lang);
   };
+  
 
   return (
     <ScrollView
