@@ -11,7 +11,7 @@ const Drawer = () => {
   return (
     <Drawer.Navigator
       drawerContent={props => <CustomDrawer {...props} />}
-      screenOptions={{ headerShown: true }}
+      screenOptions={{ headerShown: false }}
     >
       <Drawer.Screen name="Homes" component={Example} />
       <Drawer.Screen name="About" component={Example} />
