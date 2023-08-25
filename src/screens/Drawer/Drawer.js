@@ -13,9 +13,16 @@ const Drawer = () => {
       drawerContent={props => <CustomDrawer {...props} />}
       screenOptions={{ headerShown: false }}
     >
-      <Drawer.Screen name="Homes" component={Example} />
-      <Drawer.Screen name="About" component={Example} />
-      <Drawer.Screen name="Contact" component={Example} />
+      <Drawer.Screen name="Who viewed my profile" component={Example} />
+      <Drawer.Screen name="What's new in NoDhoka" component={Example} />
+      <Drawer.Screen name="QR Scanner" component={Example} />
+      <Drawer.Screen name="Notification" component={Example} />
+      <Drawer.Screen name="Manage Blocking" component={Example} />
+      <Drawer.Screen name="Share NoDhoka" component={Example} />
+      <Drawer.Screen name="Dark Mode" component={Example} />
+      <Drawer.Screen name="Settings" component={Example} />
+      <Drawer.Screen name="Send FeedBack" component={Example} />
+      <Drawer.Screen name="FAQ" component={Example} />
     </Drawer.Navigator>
   );
 };
