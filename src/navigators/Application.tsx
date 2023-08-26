@@ -10,6 +10,8 @@ import { useTheme } from '../hooks';
 import MainNavigator from './Main';
 import { useFlipper } from '@react-navigation/devtools';
 import { ApplicationStackParamList } from '../../@types/navigation';
+import Tabs from '../screens/Tabs/Tabs';
+import Badge from '../screens/Badge/Badge';
 
 const Stack = createStackNavigator<ApplicationStackParamList>();
 
@@ -28,7 +30,9 @@ const ApplicationNavigator = () => {
         <StatusBar barStyle={darkMode ? 'light-content' : 'dark-content'} />
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name="Startup" component={Startup} />
-          <Stack.Screen name="Main" component={MainNavigator} />
+          {/* <Stack.Screen name="Main" component={MainNavigator} /> */}
+          {/* <Stack.Screen name="Main" component={Tabs} /> */}
+          <Stack.Screen name="Main" component={Badge} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>
