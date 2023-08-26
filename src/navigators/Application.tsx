@@ -10,7 +10,7 @@ import { useTheme } from '../hooks';
 import MainNavigator from './Main';
 import { useFlipper } from '@react-navigation/devtools';
 import { ApplicationStackParamList } from '../../@types/navigation';
-import Home from '../screens/Home/Home';
+import Home from '../screens/Card/Card';
 
 const Stack = createStackNavigator<ApplicationStackParamList>();
 
