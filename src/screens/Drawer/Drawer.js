@@ -5,6 +5,7 @@ import About from './About';
 import Contact from './Contact';
 import Example from '../Example/Example';
 import CustomDrawer from 'NoDhoka/src/components/CustomDrawer';
+import EditProfileScreen from './EditProfileScreen';
 
 const Drawer = () => {
   const Drawer = createDrawerNavigator();
@@ -22,7 +23,7 @@ const Drawer = () => {
       <Drawer.Screen name="Dark Mode" component={Example} />
       <Drawer.Screen name="Settings" component={Example} />
       <Drawer.Screen name="Send FeedBack" component={Example} />
-      <Drawer.Screen name="FAQ" component={Example} />
+      <Drawer.Screen name="FAQ" component={EditProfileScreen} />
     </Drawer.Navigator>
   );
 };

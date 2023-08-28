@@ -37,7 +37,7 @@ const CustomDrawer = props => (
 export default CustomDrawer;
 
 const seperatorStyles = StyleSheet.create({
-  height: 1,
+  height: 2,
   width: '100%',
   backgroundColor: 'black',
 });
