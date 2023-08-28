@@ -29,7 +29,7 @@ const showAlert = () => {
   image={<Picture url={Images.sparkles.trucallerimages}/>  }/>
 
 
-  <LogCard/>
+  <LogCard name = 'Name of the contact' action = {showAlert} />
   </>
   );
 }
