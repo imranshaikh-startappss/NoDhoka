@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   View,
   Text,
@@ -8,70 +7,134 @@ import {
   TextInput,
   ImageBackground,
 } from 'react-native';
+import React from 'react';
+import { Formik } from 'formik';
+import * as Yup from 'yup';
+import { ScrollView } from 'react-native-gesture-handler';
+import DialogBox from './DialogBox';
 
 const EditProfileScreen = () => {
+  const [open, setOpen] = React.useState(false);
+
+  const SignupSchema = Yup.object().shape({
+    firstName: Yup.string()
+      .min(2, 'Too Short!')
+      .max(50, 'Too Long!')
+      .required('Required'),
+    lastName: Yup.string()
+      .min(2, 'Too Short!')
+      .max(50, 'Too Long!')
+      .required('Required'),
+    email: Yup.string().email('Invalid email').required('Required'),
+    phone: Yup.string()
+      .min(10, 'Must be 10 digit')
+      .max(10, 'Must be 10 digit')
+      .matches(/^[0]?[6789]\d{9}$/, 'Not a valid no')
+      .required('Required'),
+  });
+
   return (
-    <View style={styles.container}>
-      <View style={{ margin: 20 }}>
-        <View style={{ alignItems: 'center' }}>
-          <TouchableOpacity onPress={() => {}}>
-            <View
-              style={{
-                height: 100,
-                width: 100,
-                borderRadius: 15,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
-              <ImageBackground
-                source={{
-                  uri: 'https://parspng.com/wp-content/uploads/2022/10/camerapng.parspng.com-11.png',
-                }}
-                style={{
-                  height: 100,
-                  width: 100,
-                }}
-                imageStyle={{ borderRadius: 15 }}
-              ></ImageBackground>
-            </View>
-          </TouchableOpacity>
-          <View style={styles.action}>
-            <TextInput
-              placeholder="First Name"
-              placeholderTextColor="#666666"
-              style={styles.textInput}
-            />
-          </View>
-          <View style={styles.action}>
-            <TextInput
-              placeholder="Last Name"
-              placeholderTextColor="#666666"
-              style={styles.textInput}
-            />
-          </View>
-          <View style={styles.action}>
-            <TextInput
-              placeholder="Phone"
-              keyboardType="number-pad"
-              placeholderTextColor="#666666"
-              style={styles.textInput}
-            />
-          </View>
-          <View style={styles.action}>
-            <TextInput
-              placeholder="Email Name"
-              keyboardType="email-address"
-              placeholderTextColor="#666666"
-              style={styles.textInput}
-            />
-          </View>
+    <ScrollView>
+      <View style={styles.container}>
+        <View style={{ margin: 20 }}>
+          <Formik
+            initialValues={{
+              firstName: '',
+              lastName: '',
+              phone: '',
+              email: '',
+            }}
+            validationSchema={SignupSchema}
+          >
+            {({
+              values,
+              errors,
+              touched,
+              handleSubmit,
+              handleChange,
+              setFieldTouched,
+              isValid,
+            }) => (
+              <View style={{ alignItems: 'center' }}>
+                <TouchableOpacity
+                  onPress={() => {
+                    setOpen(!open);
+                  }}
+                >
+                  <View
+                    style={{
+                      height: 100,
+                      width: 100,
+                      borderRadius: 15,
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <ImageBackground
+                      source={{
+                        uri: 'https://parspng.com/wp-content/uploads/2022/10/camerapng.parspng.com-11.png',
+                      }}
+                      style={{
+                        height: 100,
+                        width: 100,
+                      }}
+                      imageStyle={{ borderRadius: 15 }}
+                    ></ImageBackground>
+                  </View>
+                </TouchableOpacity>
+
+                <View style={styles.action}>
+                  <TextInput
+                    placeholder="First Name"
+                    placeholderTextColor="#666666"
+                    style={styles.textInput}
+                    value={values.firstName}
+                    onChangeText={handleChange('firstName')}
+                  />
+                  {errors.firstName && <Text>{errors.firstName}</Text>}
+                </View>
+                <View style={styles.action}>
+                  <TextInput
+                    placeholder="Last Name"
+                    placeholderTextColor="#666666"
+                    style={styles.textInput}
+                    value={values.lastName}
+                    onChangeText={handleChange('lastName')}
+                  />
+                  {errors.lastName && <Text>{errors.lastName}</Text>}
+                </View>
+                <View style={styles.action}>
+                  <TextInput
+                    placeholder="Phone"
+                    keyboardType="number-pad"
+                    placeholderTextColor="#666666"
+                    style={styles.textInput}
+                    value={values.phone}
+                    onChangeText={handleChange('phone')}
+                  />
+                  {errors.phone && <Text>{errors.phone}</Text>}
+                </View>
+                <View style={styles.action}>
+                  <TextInput
+                    placeholder="Email id"
+                    keyboardType="email-address"
+                    placeholderTextColor="#666666"
+                    style={styles.textInput}
+                    value={values.email}
+                    onChangeText={handleChange('email')}
+                  />
+                  {errors.email && <Text>{errors.email}</Text>}
+                </View>
+                <TouchableOpacity style={styles.commandButton}>
+                  <Text style={styles.panelButtonTitle}>Submit</Text>
+                </TouchableOpacity>
+              </View>
+            )}
+          </Formik>
         </View>
-        <TouchableOpacity style={styles.commandButton} onPress={() => {}}>
-          <Text style={styles.panelButtonTitle}>Submit</Text>
-        </TouchableOpacity>
       </View>
-    </View>
+      {open && <DialogBox />}
+    </ScrollView>
   );
 };
 
@@ -92,12 +155,6 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: '#FFFFFF',
     paddingTop: 20,
-    // borderTopLeftRadius: 20,
-    // borderTopRightRadius: 20,
-    // shadowColor: '#000000',
-    // shadowOffset: {width: 0, height: 0},
-    // shadowRadius: 5,
-    // shadowOpacity: 0.4,
   },
   header: {
     backgroundColor: '#FFFFFF',
