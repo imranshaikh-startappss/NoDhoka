@@ -5,6 +5,7 @@ import ButtonHeading from 'NoDhoka/src/components/Card/ButtonHeading';
 import { useTheme } from '../../hooks';
 import {Alert} from 'react-native';
 import LogCard from 'NoDhoka/src/components/Card1/LogCard';
+import CallLog from 'NoDhoka/src/components/Card1/CallLog';
 
 
 const Home = ({ navigation }: any) => {
@@ -29,7 +30,8 @@ const showAlert = () => {
   image={<Picture url={Images.sparkles.trucallerimages}/>  }/>
 
 
-  <LogCard name = 'Name of the contact' action = {showAlert} />
+  {/* <LogCard name = 'Name of The contact' callType="incoming" time='time' imgSource = {Images.sparkles.callIconPng}/> */}
+  <CallLog />
   </>
   );
 }

@@ -11,7 +11,8 @@ export default function ({}: ThemeVariables) {
       bottomRight: require('./assets/images/sparkles-bottom-right.png'),
       bottom: require('./assets/images/sparkles-bottom.png'),
       bottomLeft: require('./assets/images/sparkles-bottom-left.png'),
-      trucallerimages :require("./assets/images/truecaller.png")
+      trucallerimages :require("./assets/images/truecaller.png"),
+      callIconPng: require('./assets/images/calliconpng.png')
     },
     icons: {
       colors: require('./assets/images/colorswatch.png'),
